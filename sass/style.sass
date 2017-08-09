@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+
+* 
+	box-sizing: border-box
+
+body 
+	margin: 0;
+	font-family: 'Open Sans', sans-serif
+
+.container 
+	max-width: 1200px
+	margin: 0 auto
+	width: 100%
+
+.row:before, 
+.row:after  
+	content: "" 
+	display: table 
+	clear: both 
+
+[class*="col-"] 
+	float: left 
+	text-align: center
+
+@for $i from 1 through 12
+	.col-#{$i}
+		width: ($i / 12) * 100%
+
+header 
+	background-color: #313234
+	nav
+		.container 
+			margin: 0 auto
+			height: 50px
+		ul 
+			margin: 0
+			padding: 0
+			list-style-type: none
+			float: right
+			li
+				display: inline-block
+				font-size: 16px
+				a 
+					line-height: 50px
+					padding: 0 20px
+					display: block
+					color: #fff
+					text-decoration: none
+					text-transform: uppercase
+					font-weight: bold
+					font-size: .8em
+					&:hover
+						background: #545856
+						color: #3fb0ac
+		img 
+			padding: 10px 0
+
+section
+	.container 
+		margin: 50px auto
+		text-align: center
+
+.hero 
+	height: 100vh
+	background-image: url("https://todowhatwelove.files.wordpress.com/2014/10/via-unsplash-by-danny-froese.jpeg")
+	background-size: cover
+	object-fit: cover
+	width: 100%
+	.slogan 
+		float: right
+		max-width: 600px
+		background: rgba(0, 0, 0, 0.4)
+		width: 70%
+		position: relative
+		top: 50%
+		transform: translate(0, -50%)
+		h1
+			text-transform: uppercase
+			color: #fff
+			padding: 100px 25px
+			font-size: 30px
+
+.icons 
+	.col-4
+		text-align: center
+		padding: 5px
+		margin-bottom: 85px
+		h2 
+			text-transform: uppercase
+			font-weight: bold
+		i 
+			width: 33.33%
+			display: inline-block
+			margin: 1em
+			transition: linear .3s
+			border-radius: 15px
+			background: #545856
+			color: #fff
+			font-size: 60px
+			line-height: 110px
+			width: 110px
+			&:hover
+				transition: ease-in-out .3s
+				color: white
+				cursor: pointer
+		&:hover i,
+		&:hover i + h2
+			color: #06c7e6
+	.col-12 
+		h2 
+			font-size: 30px
+			margin-top: 10px
+			font-weight: bold
+	.col-12 p,
+	.col-4 p 
+		font-weight: lighter
+		color: #777
+		padding: 15px
+		line-height: 25px
+
+.gallery [class*="col-"] 
+	position: relative
+	.layer 
+		height: 100%
+		width: 100%
+		position: absolute
+		text-align: center
+		.fa 
+			position: relative
+			top: 90px
+			transform: translate(-50%)
+			background-color: #fff
+			color: #484848
+			padding: 5px
+			border-radius: 20%
+			cursor: pointer
+			margin: 0 10px
+			font-size: 16px
+			display: none
+	&:hover 
+		.layer
+			background: rgba(0, 0, 0, 0.5)
+			background-size: cover
+			.fa
+				opacity: 1
+				display: inline-block
+
+.gallery 
+	img  
+		float: left
+		width: 100%
+		height: 30vh
+		object-fit: cover
+
+.team 
+	.col-3 
+		position: relative
+		height: 300px
+		h2 
+			padding: 10px
+			font-weight: bold
+		img 
+			border-radius: 100%
+			width: 150px
+			height: 150px
+			object-fit: cover
+		.member 
+			display: inline
+			height: 150px
+			width: 150px
+			position: absolute
+			border-radius: 100%
+			left: 0
+			right: 0
+			margin: auto
+			p 
+				position: relative
+				transform: translate(50px)
+				color: #fff
+				display: none
+				top: 60px
+				right: 50px
+				line-height: 25px
+				font-weight: bold
+			&:hover 
+				p 
+					display: block	
+		&:hover 
+			.member 
+				background: rgba(0, 0, 0, 0.5)
+
+.picture 
+	.container 
+		margin-top: 50px
+		height: 350px
+	h2 
+		padding-top: 15px
+		font-weight: bold
+		font-size: 25px
+	.col-4 
+		img 
+			border-radius: 15px
+			float: right
+			height: 60vh
+			object-fit: cover
+			width: 100%
+	.col-6 
+		p 
+	text-align: left
+	padding: 50px
+	line-height: 25px
+
+.numbers 
+	.container 
+		margin-top: 100px
+	.col-3 
+		p 
+			padding: 0
+			color: #06c7e6
+			text-transform: uppercase
+			font-size: 18px
+			line-height: 25px
+	h2 
+		font: 55px 'Bevan', cursive
+		font-weight: bold
+
+.footer 
+	background-color: #313332
+	h2 
+		color: #fff
+		text-transform: uppercase
+		font-size: 25px
+		font-weight: bold
+		margin-bottom: 15px
+		padding: 15px 0
+	h3 
+		font-weight: bold	
+	.col-4 h2,
+	.col-4 h3,
+	.col-4 p 
+		text-align: left
+	.col-4 
+		p
+			padding-right: 40px
+			color: #c0bfc0
+			line-height: 25px
+		h3
+ 			color: #fff
+	.col-6 
+		p 
+			padding-right: 0
+	.socialo 
+		padding-left: 30px
+		padding-right: 0
+	.container 
+		margin-bottom: 0
+		margin-top: 0
+	.social
+		text-align: left
+		margin-top: 15px
+		i 
+			width: 30px
+			height: 30px
+			line-height: 30px
+			border: none
+			background-color: #00c7e8
+			color: #fff
+			font-size: 20px
+			margin: 8px
+			cursor: pointer
+			text-align:center
+	.undersocial 
+		background-color: #222
+		text-align: center
+	.col-12 
+		h2 
+			font-size: 15px
+			color: #c0bfc0
+
+@media (min-width: 768px)
+	
+	@for $i from 1 through 12
+		.col-m-#{$i}
+			width: ($i / 12) * 100%
+
+@media (max-width: 767px)
+	
+	header 
+		height: auto
+		text-align: center
+		width: 100%
+		nav 
+			ul 
+				float:none
+				width: 100%
+				li
+					display: block
+					text-align: center
+		
+	.icons 
+		.col-4 
+			margin: 5px
+		.col-12 
+			margin-top: 55px
+      
+	[class*="col-"] 
+		padding: 5px
+		
+	.gallery [class*="col-"]:hover 
+		.layer
+			height: auto
+			top: 6px
+			bottom: 6px
+	
+	.team
+		.col-3 
+	    	position: relative
+	    	height: 200px
+	
+	@for $i from 1 through 12
+		.col-s-#{$i}
+			width: ($i / 12) * 100%
